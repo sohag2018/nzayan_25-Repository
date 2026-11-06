@@ -1,5 +1,4 @@
 #region Easy Settings
-$DeletePathWhenClose = "0"
 
 $PathDrive = "C:\"
 # The path or drive <Any folder path that exists> that Pip creates its' files and images. (Useful to edit if Pip or you do not have permissions to write to the C:\ drive.)
@@ -119,6 +118,235 @@ try {
     pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like the libraries could not load, are you using Windows 10 or 11? ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
 }
 
+#region verify variables
+
+$VerifyVariableName = "PathIdNumberPip"
+$VerifyVariableValue = "01"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "PathIdNumberRandom"
+$VerifyVariableValue = "0"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "CreateOrOverwriteFilesOrImages"
+$VerifyVariableValue = "1"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "StopAndGoToPath"
+$VerifyVariableValue = "0"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "ModifierName"
+$VerifyVariableValue = "0"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "BackgroundWindowColor"
+$VerifyVariableValue = "White"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "TextWindowColor"
+$VerifyVariableValue = "Black"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "VoicePitchness"
+$VerifyVariableValue = 7
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value $VerifyVariableValue
+    }
+}
+
+$VerifyVariableName = "VoiceVolume"
+$VerifyVariableValue = 60
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value $VerifyVariableValue
+    }
+}
+
+$VerifyVariableName = "VoiceSpeed"
+$VerifyVariableValue = 1
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value $VerifyVariableValue
+    }
+}
+
+$VerifyVariableName = "PipName"
+$VerifyVariableValue = "Pip the Mochi"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "PipSize"
+$VerifyVariableValue = 3
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+$VerifyVariableName = "BorderThickness"
+$VerifyVariableValue = 0
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value $VerifyVariableValue
+    }
+}
+
+$VerifyVariableName = "PipShakeHardness"
+$VerifyVariableValue = 100
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value $VerifyVariableValue
+    }
+}
+
+$VerifyVariableName = "AllowEatting"
+$VerifyVariableValue = "1"
+
+if (Test-Path "Variable:\$VerifyVariableName") {
+    Write-Host "Variable $VerifyVariableName Success" -ForegroundColor Green
+} else {
+    $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
+    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
+        $Decision = [System.Windows.MessageBox]::Show("Variable $VerifyVariableName was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
+        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
+    } else {
+        Set-Variable -Name $VerifyVariableName -Value "$VerifyVariableValue"
+    }
+}
+
+#endregion
+
 if ($PathIdNumberRandom -eq "1") {
     $PathIdNumberPip = Get-Random
 }
@@ -136,18 +364,6 @@ $OutputPathSettings = "$($PathDrive)PipTheMochi$($PathIdNumberPip)\Settings.ps1"
 
 $ImageBytesSettings = [System.Convert]::FromBase64String($Base64StringSettings)
 [System.IO.File]::WriteAllBytes($OutputPathSettings, $ImageBytesSettings)
-
-if (Test-Path "Variable:\INSERT") {
-    Write-Host "Variable INSERT Success" -ForegroundColor Green
-} else {
-    $Decision = [System.Windows.MessageBox]::Show("Variable INSERT was not found! Click yes to open the error window and list all varables needed. Click no to create the varable with the default value and continue.", "MISSING VARIABLE!!!", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Warning) 
-    if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) { 
-        $Decision = [System.Windows.MessageBox]::Show("Variable INSERT was missing, Pip The Mochi failed!", "System Error", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
-        pause ; start powershell "-NoExit Write-Host Do not want this window to type commands? Try typing exit instead! You have gotten this window from errors. ; Write-host Seems like a variable was missing! ; Write-Host '' ; write-host Try typing and running '''.\Settings''' in the current path to see all variables needed to be added ; cd $($PathDrive)PipTheMochi$($PathIdNumberPip)" ; exit
-    } else {
-        $INSERT = "INSERT"
-    }
-}
 
 # 1. Define where you want the 600-byte image saved
 $OutputPath1 = "$($PathDrive)PipTheMochi$($PathIdNumberPip)\PipIdle.png"
@@ -635,6 +851,14 @@ $Window.Add_KeyDown({
         $Decision = [System.Windows.MessageBox]::Show("Should I, Pip the Mochi, leave?", "Accept Closing of Pip the Mochi", [System.Windows.MessageBoxButton]::YesNo, [System.Windows.MessageBoxImage]::Question)
             
         if ($Decision -eq [System.Windows.MessageBoxResult]::Yes) {
+            <#
+            if ($DeletePathWhenClose -eq "1") {
+                Remove-Item -Path "$($PathDrive)PipTheMochi$($PathIdNumberPip)" -Recurse -Force
+                Write-Host "WARNING, DeletePathWhenClose is enabled! Accept deletion?"
+                pause
+                Remove-Item -Path "$($PathDrive)PipTheMochi$($PathIdNumberPip)" -Recurse -Force
+            }
+            #>
             [System.Windows.Media.CompositionTarget]::remove_Rendering($RenderLoopHandler)
             $Script:SpeechRunspace.Stop()
             $Window.Close() 
